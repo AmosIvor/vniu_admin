@@ -14,7 +14,7 @@ import { ManagingAreaComponent } from './components'
 
 const SQUARE_SIZE = 50
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: any) => {
   return (
     <ContainerComponent>
       {/* Header */}
@@ -45,7 +45,7 @@ const HomeScreen = () => {
               width: SQUARE_SIZE,
               height: SQUARE_SIZE,
               borderRadius: 10,
-              backgroundColor: '#E4E4EE',
+              backgroundColor: appColors.back,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -75,21 +75,37 @@ const HomeScreen = () => {
         <SpaceComponent height={16} />
 
         <RowComponent>
-          <ManagingAreaComponent title='Products' bgColor={appColors.CornflowerBlue} />
+          <ManagingAreaComponent
+            title='Products'
+            bgColor={appColors.CornflowerBlue}
+            onPress={() => navigation.navigate('ProductScreen')}
+          />
 
           <SpaceComponent width={16} />
 
-          <ManagingAreaComponent title='Catelogs' bgColor={appColors.CornflowerBlue} />
+          <ManagingAreaComponent
+            title='Catelogs'
+            bgColor={appColors.CornflowerBlue}
+            onPress={() => navigation.navigate('CatelogScreen')}
+          />
         </RowComponent>
 
         <SpaceComponent height={16} />
 
         <RowComponent>
-          <ManagingAreaComponent title='Comments' bgColor={appColors.CornflowerBlue} />
+          <ManagingAreaComponent
+            title='Comments'
+            bgColor={appColors.CornflowerBlue}
+            onPress={() => navigation.navigate('CommentScreen')}
+          />
 
           <SpaceComponent width={16} />
 
-          <ManagingAreaComponent title='Warehouses' bgColor={appColors.CornflowerBlue} />
+          <ManagingAreaComponent
+            title='Warehouses'
+            bgColor={appColors.CornflowerBlue}
+            onPress={() => navigation.navigate('WarehouseScreen')}
+          />
         </RowComponent>
       </SectionComponent>
     </ContainerComponent>

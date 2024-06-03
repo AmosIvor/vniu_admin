@@ -41,5 +41,6 @@ export const appColors = {
   MovieBackground: '#24233B',
   IconBackground: '#3B3B51',
   active: '#6ec531',
-  statistic: 'rgba(237, 233, 233, 1)'
+  statistic: 'rgba(237, 233, 233, 1)',
+  back: '##E4E4EE'
 }
