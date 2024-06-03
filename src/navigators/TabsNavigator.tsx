@@ -1,31 +1,23 @@
-import { BottomTabScreenProps, createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { CompositeScreenProps } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import React from 'react'
 import CustomBottomTabs from '../components/CustomBottomTabs'
-import { RootStackScreenProps } from './RootNavigator'
 
+import { HomeNavigator, OrderNavigator, StatisticNavigator } from '@navigators'
 import ChatScreen from '@screens/chats/ChatScreen'
-import HomeScreen from '@screens/homes/HomeScreen'
-import OrderScreen from '@screens/orders/OrderScreen'
-import StatisticScreen from '@screens/statistics/StatisticScreen'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import LogoutScreen from '@screens/auths/LogoutScreen'
+import { LogoutScreen } from '@screens/auths'
 
-export type TabsStackParamList = {
+type TabsStackParamList = {
   Home: undefined
   Order: undefined
   Chat: undefined
   Statistic: undefined
   Logout: undefined
 }
-const TabsStack = createBottomTabNavigator<TabsStackParamList>()
-
-export type TabsStackScreenProps<T extends keyof TabsStackParamList> = CompositeScreenProps<
-  BottomTabScreenProps<TabsStackParamList, T>,
-  RootStackScreenProps<'TabsStack'>
->
 
 const TabsNavigator = () => {
+  const TabsStack = createBottomTabNavigator<TabsStackParamList>()
+
   return (
     <TabsStack.Navigator
       screenOptions={{
@@ -35,7 +27,7 @@ const TabsNavigator = () => {
     >
       <TabsStack.Screen
         name='Home'
-        component={HomeScreen}
+        component={HomeNavigator}
         options={{
           headerShown: false,
           tabBarIcon(props) {
@@ -46,7 +38,7 @@ const TabsNavigator = () => {
 
       <TabsStack.Screen
         name='Order'
-        component={OrderScreen}
+        component={OrderNavigator}
         options={{
           tabBarIcon(props) {
             return <MaterialCommunityIcons name='cart' {...props} />
@@ -67,7 +59,7 @@ const TabsNavigator = () => {
 
       <TabsStack.Screen
         name='Statistic'
-        component={StatisticScreen}
+        component={StatisticNavigator}
         options={{
           headerShown: false,
           tabBarIcon(props) {

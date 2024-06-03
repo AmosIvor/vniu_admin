@@ -1,7 +1,7 @@
 import { appThemes } from '@constants'
 import { AppContext } from '@contexts'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
-import { RootNavigator } from '@navigators'
+import { AppRouters } from '@navigators'
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native'
 import React, { useContext } from 'react'
 import { StatusBar, useColorScheme } from 'react-native'
@@ -34,7 +34,7 @@ const App = () => {
         <Host>
           <NavigationContainer theme={themeTest === 'dark' ? DarkTheme : DefaultTheme}>
             <BottomSheetModalProvider>
-              <RootNavigator toggleTheme={toggleTheme} />
+              <AppRouters />
             </BottomSheetModalProvider>
           </NavigationContainer>
         </Host>
