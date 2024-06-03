@@ -40,5 +40,6 @@ export const appColors = {
   SecondaryColorText: 'rgba(255, 255, 255, 0.8)',
   MovieBackground: '#24233B',
   IconBackground: '#3B3B51',
-  active: '#6ec531'
+  active: '#6ec531',
+  statistic: 'rgba(237, 233, 233, 1)'
 }

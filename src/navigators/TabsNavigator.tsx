@@ -5,6 +5,7 @@ import CustomBottomTabs from '../components/CustomBottomTabs'
 import { HomeNavigator, OrderNavigator, StatisticNavigator } from '@navigators'
 import ChatScreen from '@screens/chats/ChatScreen'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { LogoutScreen } from '@screens/auths'
 
 type TabsStackParamList = {
@@ -40,6 +41,7 @@ const TabsNavigator = () => {
         name='Order'
         component={OrderNavigator}
         options={{
+          headerShown: false,
           tabBarIcon(props) {
             return <MaterialCommunityIcons name='cart' {...props} />
           }
@@ -74,7 +76,7 @@ const TabsNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon(props) {
-            return <MaterialCommunityIcons name='robot-happy-outline' {...props} />
+            return <MaterialCommunityIcons name='logout' {...props} />
           }
         }}
       />

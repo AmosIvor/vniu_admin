@@ -13,6 +13,7 @@ import TagComponent from './TagComponent'
 import TextComponent from './TextComponent'
 import FilterView from './FilterView'
 import CustomInput from './Input/CustomInput'
+import StatisticOverviewComponent from './StatisticOverviewComponent'
 
 export {
   RowComponent,
@@ -28,5 +29,6 @@ export {
   RangeSliderComponent,
   RatingComponent,
   FilterView,
-  CustomInput
+  CustomInput,
+  StatisticOverviewComponent
 }
