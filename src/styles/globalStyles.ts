@@ -53,6 +53,14 @@ export const globalStyles = StyleSheet.create({
     color: appColors.text
   },
 
+  inputContainer: {
+    backgroundColor: appColors.White,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    paddingVertical: 10
+  },
+
   button: {
     borderRadius: 12,
     justifyContent: 'center',
@@ -62,5 +70,13 @@ export const globalStyles = StyleSheet.create({
     paddingVertical: 16,
     minHeight: 56,
     flexDirection: 'row'
+  },
+
+  card: {
+    borderRadius: 10,
+    backgroundColor: appColors.White,
+    // padding: 12,
+    marginHorizontal: 8,
+    marginVertical: 8
   }
 })

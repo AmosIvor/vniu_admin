@@ -1,7 +1,6 @@
 import { Rating } from '@kolking/react-native-rating'
 import { useCallback, useEffect, useState } from 'react'
-import { View, Text } from 'react-native'
-import { appColors } from 'src/constants/appColors'
+import { View } from 'react-native'
 
 interface Props {
   value?: number

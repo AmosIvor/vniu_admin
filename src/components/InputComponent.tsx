@@ -11,10 +11,11 @@ interface Props {
   affix?: ReactNode
   suffix?: ReactNode
   isAllowClear?: boolean
+  inputRef?: any
 }
 
 const InputComponent = (props: Props) => {
-  const { value, onChange, placeholder, affix, suffix, isAllowClear } = props
+  const { value, onChange, placeholder, affix, suffix, isAllowClear, inputRef } = props
 
   return (
     <View style={[styles.inputContainer]}>
@@ -22,6 +23,7 @@ const InputComponent = (props: Props) => {
 
       <TextInput
         value={value}
+        ref={inputRef}
         style={[styles.input, globalStyles.text]}
         placeholder={placeholder ?? ''}
         onChangeText={(val) => onChange(val)}

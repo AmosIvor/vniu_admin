@@ -54,7 +54,7 @@ const TabsNavigator = () => {
         options={{
           headerShown: false,
           tabBarIcon(props) {
-            return <MaterialCommunityIcons name='chat-processing-outline' {...props} />
+            return <MaterialCommunityIcons name='account' {...props} />
           }
         }}
       />

@@ -14,6 +14,8 @@ import TextComponent from './TextComponent'
 import FilterView from './FilterView'
 import CustomInput from './Input/CustomInput'
 import StatisticOverviewComponent from './StatisticOverviewComponent'
+import LoadingComponent from './LoadingComponent'
+import CardComponent from './CardComponent'
 
 export {
   RowComponent,
@@ -30,5 +32,7 @@ export {
   RatingComponent,
   FilterView,
   CustomInput,
-  StatisticOverviewComponent
+  StatisticOverviewComponent,
+  LoadingComponent,
+  CardComponent
 }

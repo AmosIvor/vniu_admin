@@ -3,13 +3,11 @@ import {
   CategoriesComponent,
   RangeSliderComponent,
   RatingComponent,
-  RowComponent,
   SectionComponent,
   SpaceComponent,
   TextComponent
 } from '@components'
 import { useEffect, useRef } from 'react'
-import { View, Text } from 'react-native'
 import { Modalize } from 'react-native-modalize'
 import { Portal } from 'react-native-portalize'
 

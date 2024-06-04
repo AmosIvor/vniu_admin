@@ -1,11 +1,20 @@
-import { useNavigation } from '@react-navigation/native'
-import { ReactNode } from 'react'
-import { View, ScrollView, ImageBackground, SafeAreaView, Image, StyleProp, ViewStyle } from 'react-native'
-import { appColors, appFonts } from '@constants'
-import { ArrowLeft } from 'iconsax-react-native'
-import { globalStyles } from 'src/styles/globalStyles'
-import { CircleComponent, RowComponent, SpaceComponent, TextComponent } from '@components'
 import { IMAGES } from '@assets'
+import { CircleComponent, RowComponent, SpaceComponent, TextComponent } from '@components'
+import { appColors, appFonts } from '@constants'
+import { useNavigation } from '@react-navigation/native'
+import { ArrowLeft } from 'iconsax-react-native'
+import { ReactNode } from 'react'
+import {
+  Image,
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  StyleProp,
+  TouchableOpacity,
+  View,
+  ViewStyle
+} from 'react-native'
+import { globalStyles } from 'src/styles/globalStyles'
 
 interface Props {
   isImageBg?: boolean
@@ -15,10 +24,14 @@ interface Props {
   isBack?: boolean
   isChat?: boolean
   styles?: StyleProp<ViewStyle>
+  icon?: ReactNode
+  onPressRight?: () => void
 }
 
+const SQUARE_SIZE = 34
+
 const ContainerComponent = (props: Props) => {
-  const { isImageBg, isScroll, title, children, isBack, isChat, styles } = props
+  const { isImageBg, isScroll, title, children, isBack, isChat, styles, icon, onPressRight } = props
 
   const navigation: any = useNavigation()
 
@@ -46,7 +59,7 @@ const ContainerComponent = (props: Props) => {
             ]}
           >
             {isBack && (
-              <CircleComponent size={34} onPress={() => navigation.goBack()} styles={{ marginRight: 12, zIndex: 1 }}>
+              <CircleComponent size={SQUARE_SIZE} onPress={() => navigation.goBack()} styles={{ zIndex: 1 }}>
                 <ArrowLeft size={24} color={appColors.text} />
               </CircleComponent>
             )}
@@ -57,11 +70,28 @@ const ContainerComponent = (props: Props) => {
                 font={appFonts.medium}
                 flex={1}
                 styles={{
-                  marginLeft: -46,
+                  marginLeft: icon ? 0 : -SQUARE_SIZE,
                   textAlign: 'center'
                 }}
                 size={22}
               />
+            )}
+
+            {icon && (
+              <TouchableOpacity
+                style={{
+                  width: SQUARE_SIZE,
+                  height: SQUARE_SIZE,
+                  borderRadius: 10,
+                  backgroundColor: appColors.back,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                onPress={onPressRight ?? (() => {})}
+              >
+                {icon}
+              </TouchableOpacity>
             )}
 
             {isChat && (
