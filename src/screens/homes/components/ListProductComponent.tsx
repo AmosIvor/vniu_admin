@@ -1,4 +1,5 @@
 import { ProductItem } from '@appTypes/product.type'
+import { appInfors } from '@constants'
 import { ProductItemComponent } from '@screens/homes/components'
 import { FlatList } from 'react-native'
 
@@ -8,6 +9,7 @@ interface Props {
 
 const ListProductComponent = (props: Props) => {
   const { items } = props
+  const widthCalculate = (appInfors.sizes.WIDTH - 16 * 2 - 16) / 2
 
   return (
     <FlatList
@@ -15,7 +17,7 @@ const ListProductComponent = (props: Props) => {
       data={items}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
-        <ProductItemComponent item={item} key={item.productItemId} styles={{ flex: 1, width: undefined }} />
+        <ProductItemComponent item={item} key={item.productItemId} styles={{ width: widthCalculate }} />
       )}
     />
   )

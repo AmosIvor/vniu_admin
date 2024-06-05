@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 15,
-    backgroundColor: appColors.bgPrimary,
-    marginBottom: 19
+    backgroundColor: appColors.bgPrimary
   },
 
   input: {

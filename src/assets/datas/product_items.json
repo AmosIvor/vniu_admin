@@ -107,5 +107,33 @@
         "productItemId": 4
       }
     ]
+  },
+
+  {
+    "productItemId": 5,
+    "productId": 1,
+    "colourId": 1,
+    "originalPrice": 19,
+    "salePrice": 17,
+    "productItemSold": 19,
+    "productItemRating": 4.3,
+    "productItemCode": 23153,
+    "productImages": [
+      {
+        "productImageId": 1,
+        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productItemId": 5
+      },
+      {
+        "productImageId": 2,
+        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productItemId": 5
+      },
+      {
+        "productImageId": 3,
+        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productItemId": 5
+      }
+    ]
   }
 ]

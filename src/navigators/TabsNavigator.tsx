@@ -7,6 +7,7 @@ import ChatScreen from '@screens/chats/ChatScreen'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { LogoutScreen } from '@screens/auths'
+import { HomeScreen } from '@screens/homes'
 
 type TabsStackParamList = {
   Home: undefined
@@ -28,7 +29,7 @@ const TabsNavigator = () => {
     >
       <TabsStack.Screen
         name='Home'
-        component={HomeNavigator}
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon(props) {

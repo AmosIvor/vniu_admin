@@ -1,14 +1,12 @@
-import { TabsNavigator } from '@navigators'
+import { HomeNavigator, TabsNavigator } from '@navigators'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import NotFoundScreen from '@screens/NotFoundScreen'
 
 type RootStackParamList = {
-  HomeScreen: undefined
-  ChatScreen: undefined
-  OrderScreen: undefined
-  StatisticScreen: undefined
-  NotFoundScreen: undefined
   MainScreen: undefined
+  NotFoundScreen: undefined
+
+  HomeNavigator: undefined
 }
 
 const MainNavigator = () => {
@@ -17,6 +15,8 @@ const MainNavigator = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name='MainScreen' component={TabsNavigator} />
       <Stack.Screen name='NotFoundScreen' component={NotFoundScreen} />
+
+      <Stack.Screen name='HomeNavigator' component={HomeNavigator} />
     </Stack.Navigator>
   )
 }

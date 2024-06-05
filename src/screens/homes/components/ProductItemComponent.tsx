@@ -15,14 +15,14 @@ const ProductItemComponent = (props: Props) => {
   const { item, styles } = props
   const navigation: any = useNavigation()
 
-  const heightCalculate = (appInfors.sizes.WIDTH - 16 * 2 - 8) / 2
+  const heightCalculate = (appInfors.sizes.WIDTH - 16 * 2 - 16) / 2
   const percentCalculate = Math.round(((item.originalPrice - item.salePrice) / item.originalPrice) * 100)
 
   return (
     <CardComponent
       isShadow
       styles={styles}
-      onPress={() => navigation.navigate('ProductDetailScreen', { id: item.productItemId })}
+      onPress={() => navigation.navigate('HomeNavigator', { screen: 'ProductDetailScreen', id: item.productItemId })}
     >
       <View
         style={{
@@ -66,7 +66,7 @@ const ProductItemComponent = (props: Props) => {
         <SpaceComponent height={6} />
 
         <TextComponent
-          text='Loose open shirt sldfkjsdf lsjdfls df lsjkdflsdf '
+          text='Loose open shirt'
           font={appFonts.medium}
           size={17}
           color={appColors.text}
@@ -90,7 +90,7 @@ const ProductItemComponent = (props: Props) => {
           </View>
         </RowComponent>
 
-        <SpaceComponent height={6} />
+        <SpaceComponent height={7} />
 
         <RowComponent>
           <RowComponent>

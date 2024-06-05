@@ -11,10 +11,16 @@ import { ModalFiltering } from '@modals'
 import { SearchNormal, Sort } from 'iconsax-react-native'
 import { useEffect, useRef, useState } from 'react'
 import { Keyboard, TouchableOpacity, View } from 'react-native'
+import { ListProductComponent } from '@screens/homes/components'
+import { DATAS } from '@assets'
+import { ProductItem } from '@appTypes/product.type'
+import { debounce } from 'lodash'
 
 const ProductSearchScreen = ({ navigation, route }: any) => {
-  const [search, setSearch] = useState('')
+  const [searchKey, setSearchKey] = useState('')
   const [isShowModalFilter, setIsShowModalFilter] = useState(false)
+  const [productItemListData, setProductItemListData] = useState<ProductItem[]>([])
+  const [isSearching, setIsSearching] = useState(false)
   const inputRef = useRef<any>(null)
 
   useEffect(() => {
@@ -24,6 +30,23 @@ const ProductSearchScreen = ({ navigation, route }: any) => {
       inputRef.current && inputRef.current.focus()
     }
   }, [route.params])
+
+  useEffect(() => {
+    setProductItemListData(DATAS.productItemList)
+  }, [])
+
+  useEffect(() => {
+    if (searchKey) {
+      const handleChangeSearchValue = debounce(handleSearchWithTitle, 1000)
+
+      handleChangeSearchValue()
+    }
+  })
+
+  const handleSearchWithTitle = () => {
+    // call api search key
+    console.log('search key: ', searchKey)
+  }
 
   const onPressFilter = () => {
     // hide keyboard
@@ -36,13 +59,13 @@ const ProductSearchScreen = ({ navigation, route }: any) => {
       <SpaceComponent height={10} />
 
       {/* search-bar */}
-      <SectionComponent>
+      <SectionComponent styles={{ paddingBottom: 10 }}>
         <RowComponent styles={{ alignItems: 'flex-start' }}>
           <RowComponent styles={{ flex: 1 }}>
             <InputComponent
               inputRef={inputRef}
-              value={search}
-              onChange={(val) => setSearch(val)}
+              value={searchKey}
+              onChange={(val) => setSearchKey(val)}
               placeholder='Search...'
               affix={
                 <View style={{}}>
@@ -71,11 +94,14 @@ const ProductSearchScreen = ({ navigation, route }: any) => {
           </TouchableOpacity>
         </RowComponent>
         <ModalFiltering isVisible={isShowModalFilter} onClosed={() => setIsShowModalFilter(false)} />
+
+        <SpaceComponent height={8} />
+
+        <TextComponent text='Found 10 items' size={14} color={'rgba(0, 0, 0, 0.4)'} />
       </SectionComponent>
 
-      <SectionComponent>
-        <TextComponent font={appFonts.medium} size={20} text='Hello' />
-        <TextComponent font={appFonts.regular} size={20} text='Hello' />
+      <SectionComponent styles={{ paddingHorizontal: 8, paddingBottom: 6, flex: 1 }}>
+        <ListProductComponent items={productItemListData} />
       </SectionComponent>
     </ContainerComponent>
   )

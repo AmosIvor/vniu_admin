@@ -19,14 +19,22 @@ const ProductScreen = ({ navigation }: any) => {
     <ContainerComponent
       isBack
       title='Products'
-      icon={<Add size={24} color={appColors.primary} onPress={() => navigation.navigate('ProductAddScreen')} />}
+      icon={
+        <Add
+          size={24}
+          color={appColors.primary}
+          onPress={() => navigation.navigate('HomeNavigator', { screen: 'ProductAddScreen' })}
+        />
+      }
     >
       {/* button search */}
-      <SectionComponent>
+      <SectionComponent styles={{ paddingBottom: 10 }}>
         <RowComponent>
           <RowComponent
             styles={[{ flex: 1 }, globalStyles.inputContainer]}
-            onPress={() => navigation.navigate('ProductSearchScreen', { isFilter: false })}
+            onPress={() =>
+              navigation.navigate('HomeNavigator', { screen: 'ProductSearchScreen', params: { isFilter: false } })
+            }
           >
             <SearchNormal size={20} color={appColors.text} />
             <SpaceComponent width={10} />
@@ -46,8 +54,9 @@ const ProductScreen = ({ navigation }: any) => {
               borderColor: appColors.black
             }}
             onPress={() =>
-              navigation.navigate('ProductSearchScreen', {
-                isFilter: true
+              navigation.navigate('HomeNavigator', {
+                screen: 'ProductSearchScreen',
+                params: { isFilter: true }
               })
             }
           >
@@ -58,7 +67,7 @@ const ProductScreen = ({ navigation }: any) => {
 
         <TextComponent text='Found 10 items' size={14} color={'rgba(0, 0, 0, 0.4)'} />
       </SectionComponent>
-      <SectionComponent styles={{ paddingHorizontal: 8 }}>
+      <SectionComponent styles={{ paddingHorizontal: 8, paddingBottom: 6, flex: 1 }}>
         <ListProductComponent items={productItemListData} />
       </SectionComponent>
     </ContainerComponent>

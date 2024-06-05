@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ManagingAreaComponent
             title='Products'
             bgColor={appColors.CornflowerBlue}
-            onPress={() => navigation.navigate('ProductScreen')}
+            onPress={() => navigation.navigate('HomeNavigator', { screen: 'ProductScreen' })}
           />
 
           <SpaceComponent width={16} />
@@ -86,7 +86,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ManagingAreaComponent
             title='Catelogs'
             bgColor={appColors.CornflowerBlue}
-            onPress={() => navigation.navigate('CatelogScreen')}
+            onPress={() => navigation.navigate('HomeNavigator', { screen: 'CatelogScreen' })}
           />
         </RowComponent>
 
@@ -96,7 +96,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ManagingAreaComponent
             title='Comments'
             bgColor={appColors.CornflowerBlue}
-            onPress={() => navigation.navigate('CommentScreen')}
+            onPress={() => navigation.navigate('HomeNavigator', { screen: 'CommentScreen' })}
           />
 
           <SpaceComponent width={16} />
@@ -104,7 +104,7 @@ const HomeScreen = ({ navigation }: any) => {
           <ManagingAreaComponent
             title='Warehouses'
             bgColor={appColors.CornflowerBlue}
-            onPress={() => navigation.navigate('WarehouseScreen')}
+            onPress={() => navigation.navigate('HomeNavigator', { screen: 'WarehouseScreen' })}
           />
         </RowComponent>
       </SectionComponent>
