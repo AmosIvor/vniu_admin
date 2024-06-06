@@ -36,7 +36,9 @@ const ProductItemComponent = (props: Props) => {
         }}
       >
         <Image
-          source={IMAGES.avatar}
+          source={{
+            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&s'
+          }}
           style={{
             position: 'absolute',
             left: 0,

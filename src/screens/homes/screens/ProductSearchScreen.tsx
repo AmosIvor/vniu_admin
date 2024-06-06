@@ -1,3 +1,5 @@
+import { ProductItem } from '@appTypes/product.type'
+import { DATAS } from '@assets'
 import {
   ContainerComponent,
   InputComponent,
@@ -6,15 +8,13 @@ import {
   SpaceComponent,
   TextComponent
 } from '@components'
-import { appColors, appFonts } from '@constants'
+import { appColors } from '@constants'
 import { ModalFiltering } from '@modals'
+import { ListProductComponent } from '@screens/homes/components'
 import { SearchNormal, Sort } from 'iconsax-react-native'
+import { debounce } from 'lodash'
 import { useEffect, useRef, useState } from 'react'
 import { Keyboard, TouchableOpacity, View } from 'react-native'
-import { ListProductComponent } from '@screens/homes/components'
-import { DATAS } from '@assets'
-import { ProductItem } from '@appTypes/product.type'
-import { debounce } from 'lodash'
 
 const ProductSearchScreen = ({ navigation, route }: any) => {
   const [searchKey, setSearchKey] = useState('')

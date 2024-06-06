@@ -53,6 +53,7 @@ const ButtonComponent = (props: Props) => {
           },
           styles
         ]}
+        activeOpacity={0.8}
       >
         {icon && iconFlex === 'left' && icon}
         {text && (

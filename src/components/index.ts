@@ -16,6 +16,9 @@ import CustomInput from './Input/CustomInput'
 import StatisticOverviewComponent from './StatisticOverviewComponent'
 import LoadingComponent from './LoadingComponent'
 import CardComponent from './CardComponent'
+import DropdownPickerComponent from './DropdownPickerComponent'
+import DatePickerComponent from './DatePickerComponent'
+import CarouselComponent from './CarouselComponent'
 
 export {
   RowComponent,
@@ -34,5 +37,8 @@ export {
   CustomInput,
   StatisticOverviewComponent,
   LoadingComponent,
-  CardComponent
+  CardComponent,
+  DropdownPickerComponent,
+  DatePickerComponent,
+  CarouselComponent
 }

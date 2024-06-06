@@ -22,7 +22,7 @@ const CardComponent = (props: Props) => {
   ]
 
   return (
-    <TouchableOpacity style={localStyles} onPress={onPress}>
+    <TouchableOpacity style={localStyles} onPress={onPress} activeOpacity={0.8}>
       {children}
     </TouchableOpacity>
   )
