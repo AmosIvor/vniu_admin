@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import {
+  CatelogAddScreen,
   CatelogScreen,
   CommentScreen,
   ProductAddScreen,
@@ -11,13 +12,15 @@ import {
 
 type RootStackParamList = {
   ProductScreen: undefined
-  CatelogScreen: undefined
-  CommentScreen: undefined
-  WarehouseScreen: undefined
-
   ProductDetailScreen: undefined
   ProductAddScreen: undefined
   ProductSearchScreen: undefined
+
+  CatelogScreen: undefined
+  CatelogAddScreen: undefined
+
+  CommentScreen: undefined
+  WarehouseScreen: undefined
 }
 
 const HomeNavigator = () => {
@@ -30,6 +33,8 @@ const HomeNavigator = () => {
       <Stack.Screen name='ProductSearchScreen' component={ProductSearchScreen} />
 
       <Stack.Screen name='CatelogScreen' component={CatelogScreen} />
+      <Stack.Screen name='CatelogAddScreen' component={CatelogAddScreen} />
+
       <Stack.Screen name='CommentScreen' component={CommentScreen} />
       <Stack.Screen name='WarehouseScreen' component={WarehouseScreen} />
     </Stack.Navigator>

@@ -13,7 +13,7 @@ const CatelogItemComponent = (props: Props) => {
 
   return (
     <CardComponent isShadow styles={styles} onPress={() => {}}>
-      <View style={{ paddingHorizontal: 16, paddingVertical: 12, backgroundColor: '#EFEFEF' }}>
+      <View style={{ paddingHorizontal: 16, paddingVertical: 12, backgroundColor: '#F5F4F4' }}>
         <TextComponent text={item.productCategoryName} numberOfLine={1} size={17} color={appColors.text} />
       </View>
     </CardComponent>

@@ -1,3 +1,4 @@
+import CatelogAddScreen from './CatelogAddScreen'
 import CatelogScreen from './CatelogScreen'
 import CommentScreen from './CommentScreen'
 import ProductAddScreen from './ProductAddScreen'
@@ -13,5 +14,6 @@ export {
   WarehouseScreen,
   ProductAddScreen,
   ProductDetailScreen,
-  ProductSearchScreen
+  ProductSearchScreen,
+  CatelogAddScreen
 }

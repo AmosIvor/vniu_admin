@@ -126,6 +126,7 @@ const ProductAddScreen = ({ navigation }: any) => {
           numberOfLine={2}
         />
       </SectionComponent>
+
       {/* button  */}
       <SectionComponent>
         <RowComponent>

@@ -8,6 +8,7 @@ import {
   TextComponent
 } from '@components'
 import { appColors } from '@constants'
+import { ModalLoading } from '@modals'
 import { ListCatelogComponent } from '@screens/homes/components'
 import { Add, SearchNormal } from 'iconsax-react-native'
 import { useEffect, useState } from 'react'
@@ -35,7 +36,13 @@ const CatelogScreen = ({ navigation }: any) => {
     <ContainerComponent
       isBack
       title='Catelogs'
-      icon={<Add size={24} color={appColors.primary} onPress={() => setIsShowModal(true)} />}
+      icon={
+        <Add
+          size={24}
+          color={appColors.primary}
+          onPress={() => navigation.navigate('HomeNavigator', { screen: 'CatelogAddScreen' })}
+        />
+      }
     >
       {/* button search */}
       <SectionComponent styles={{ paddingBottom: 10 }}>
@@ -62,6 +69,8 @@ const CatelogScreen = ({ navigation }: any) => {
       <SectionComponent styles={{ paddingHorizontal: 8, paddingBottom: 6, flex: 1 }}>
         <ListCatelogComponent items={catelogs} />
       </SectionComponent>
+
+      <ModalLoading isVisible={isShowModal} />
     </ContainerComponent>
   )
 }

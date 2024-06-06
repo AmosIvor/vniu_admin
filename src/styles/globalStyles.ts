@@ -67,8 +67,7 @@ export const globalStyles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: appColors.primary,
     paddingHorizontal: 16,
-    paddingVertical: 16,
-    minHeight: 56,
+    minHeight: 50,
     flexDirection: 'row'
   },
 
