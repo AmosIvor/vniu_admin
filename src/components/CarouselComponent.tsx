@@ -1,4 +1,4 @@
-import { ProductItem } from '@appTypes/product.type'
+import { ProductImage, ProductItem } from '@appTypes/product.type'
 import { DATAS } from '@assets'
 import { RowComponent, SectionComponent, SpaceComponent } from '@components'
 import { appColors, appInfors } from '@constants'
@@ -6,32 +6,51 @@ import { ArrowLeft2, ArrowRight2 } from 'iconsax-react-native'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Image, TouchableOpacity } from 'react-native'
 
+interface Props {
+  imagesData: ProductImage[]
+}
+
 const BUTTON_SIZE = 24
 const PADDING_HORIZONTAL = 16
 
-const CarouselComponent = () => {
-  const [productItemData, setProductItemData] = useState<ProductItem>()
+const CarouselComponent = (props: Props) => {
+  const { imagesData } = props
+  // const [productItemData, setProductItemData] = useState<ProductItem>()
   const [activeImage, setActiveImage] = useState<string>('')
   const timeRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const widthCalculate = appInfors.sizes.WIDTH * 0.8
 
-  useEffect(() => {
-    setProductItemData(DATAS.productItemList[0])
+  const imageList: string[] = useMemo(() => {
+    if (imagesData) {
+      console.log(imagesData)
+      return imagesData.map((productImage) => productImage.productImageUrl)
+    }
+    return []
   }, [])
 
-  const imageList: string[] = useMemo(() => {
-    if (productItemData) {
-      return productItemData.productImages.map((productImage) => productImage.productImageUrl)
-    }
+  // useEffect(() => {
+  //   setProductItemData(DATAS.productItemList[0])
+  // }, [])
 
-    return []
-  }, [productItemData])
+  // const imageList: string[] = useMemo(() => {
+  //   if (productItemData) {
+  //     return productItemData.productImages.map((productImage) => productImage.productImageUrl)
+  //   }
+
+  //   return []
+  // }, [productItemData])
+
+  // useEffect(() => {
+  //   if (productItemData) {
+  //     setActiveImage(imageList[0])
+  //   }
+  // }, [productItemData, imageList])
 
   useEffect(() => {
-    if (productItemData) {
+    if (imagesData) {
       setActiveImage(imageList[0])
     }
-  }, [productItemData, imageList])
+  }, [])
 
   const currentIndexActiveImage = useMemo(() => {
     return imageList.indexOf(activeImage)
@@ -90,22 +109,20 @@ const CarouselComponent = () => {
           {Array(imageList.length)
             .fill(0)
             .map((_, index) => (
-              <>
-                <TouchableOpacity
-                  style={{
-                    width: 14,
-                    height: 14,
-                    borderRadius: 100,
-                    borderWidth: 1,
-                    marginHorizontal: 10,
-                    borderColor: currentIndexActiveImage === index ? appColors.primary : appColors.Black,
-                    backgroundColor: currentIndexActiveImage === index ? appColors.primary : appColors.White
-                  }}
-                  key={`carousel ${index}`}
-                  onPress={() => handleCarousel(index)}
-                  activeOpacity={0.8}
-                />
-              </>
+              <TouchableOpacity
+                style={{
+                  width: 14,
+                  height: 14,
+                  borderRadius: 100,
+                  borderWidth: 1,
+                  marginHorizontal: 10,
+                  borderColor: currentIndexActiveImage === index ? appColors.primary : appColors.Black,
+                  backgroundColor: currentIndexActiveImage === index ? appColors.primary : appColors.White
+                }}
+                key={`carousel ${index}`}
+                onPress={() => handleCarousel(index)}
+                activeOpacity={0.8}
+              />
             ))}
         </RowComponent>
         <TouchableOpacity

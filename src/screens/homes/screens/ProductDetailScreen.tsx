@@ -1,3 +1,5 @@
+import { ProductItem } from '@appTypes/product.type'
+import { DATAS } from '@assets'
 import {
   ButtonComponent,
   CarouselComponent,
@@ -9,6 +11,7 @@ import {
   SpaceComponent
 } from '@components'
 import { appColors, appInfors } from '@constants'
+import { useState } from 'react'
 
 interface SelectModel {
   label: string
@@ -16,7 +19,7 @@ interface SelectModel {
 }
 
 const ProductDetailScreen = () => {
-  const widthCalculate = appInfors.sizes.WIDTH * 0.6
+  const [productItemData, setproductItemData] = useState<ProductItem>()
   const widthSplit = appInfors.sizes.WIDTH * 0.3
   const widthButton = (appInfors.sizes.WIDTH - 16 * 2 - 40) / 2
 
@@ -33,7 +36,7 @@ const ProductDetailScreen = () => {
       <SpaceComponent height={10} />
 
       {/* <CarouselComponent /> */}
-      <CarouselComponent />
+      <CarouselComponent imagesData={DATAS.productItemList[0].productImages} />
 
       {/* product-information */}
       <SectionComponent>
