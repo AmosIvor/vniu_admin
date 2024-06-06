@@ -19,16 +19,33 @@ interface SelectModel {
 }
 
 const ProductDetailScreen = () => {
-  const [productItemData, setproductItemData] = useState<ProductItem>()
+  const [productItemData, setProductItemData] = useState<ProductItem>(DATAS.productItemList[0])
   const widthSplit = appInfors.sizes.WIDTH * 0.3
   const widthButton = (appInfors.sizes.WIDTH - 16 * 2 - 40) / 2
 
-  const usersSelected: SelectModel[] = [
-    { label: 'abc', value: 'ab1' },
-    { label: 'abd', value: 'ab2' },
-    { label: 'abe', value: 'ab3' },
-    { label: 'abf', value: 'ab4' }
+  const [value, setValue] = useState<string[]>(['2'])
+  const categoryList: SelectModel[] = [
+    { label: 'Shirt', value: '1' },
+    { label: 'Polo', value: '2' },
+    { label: 'T-Shirt', value: '3' },
+    { label: 'Dress', value: '4' }
   ]
+
+  const [valueSize, setValueSize] = useState<string[]>(['2'])
+  const sizeList: SelectModel[] = [
+    { label: 'S', value: '1' },
+    { label: 'M', value: '2' },
+    { label: 'L', value: '3' },
+    { label: 'XL', value: '4' }
+  ]
+
+  const handleChangeValue = (value: string[]) => {
+    setValue(value)
+  }
+
+  const handleChangeValueSize = (value: string[]) => {
+    setValueSize(value)
+  }
 
   return (
     <ContainerComponent isBack title='Product Detail' isScroll>
@@ -36,14 +53,14 @@ const ProductDetailScreen = () => {
       <SpaceComponent height={10} />
 
       {/* <CarouselComponent /> */}
-      <CarouselComponent imagesData={DATAS.productItemList[0].productImages} />
+      <CarouselComponent imagesData={productItemData.productImages} />
 
       {/* product-information */}
       <SectionComponent>
         {/* product-name */}
         <InputComponent
           title='Name'
-          value='Loose Shirt Open'
+          value={'Loost Shirt'}
           onChange={() => {}}
           inputStyles={{ paddingHorizontal: 6, borderRadius: 8 }}
           inputTextStyles={{ fontSize: 16 }}
@@ -55,10 +72,10 @@ const ProductDetailScreen = () => {
           {/* Category */}
           <DropdownPickerComponent
             title='Category'
-            selected={['abc']}
-            items={usersSelected}
-            onSelect={() => {}}
-            multible
+            selected={value}
+            items={categoryList}
+            onSelect={(val) => handleChangeValue(val)}
+            // multible
             styles={{ flex: 1 }}
           />
 
@@ -66,7 +83,7 @@ const ProductDetailScreen = () => {
 
           <InputComponent
             title='Price ($)'
-            value='10.9'
+            value={productItemData.salePrice.toString()}
             onChange={() => {}}
             inputStyles={{ paddingHorizontal: 6, borderRadius: 8, width: widthSplit }}
             inputTextStyles={{ fontSize: 16 }}
@@ -78,10 +95,10 @@ const ProductDetailScreen = () => {
         <RowComponent justify='space-between'>
           <DropdownPickerComponent
             title='Size'
-            selected={['S']}
-            items={usersSelected}
-            onSelect={() => {}}
-            multible
+            selected={valueSize}
+            items={sizeList}
+            onSelect={(val) => handleChangeValue(val)}
+            // multible
             styles={{ flex: 1 }}
           />
 

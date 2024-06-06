@@ -1,5 +1,4 @@
-import { ProductImage, ProductItem } from '@appTypes/product.type'
-import { DATAS } from '@assets'
+import { ProductImage } from '@appTypes/product.type'
 import { RowComponent, SectionComponent, SpaceComponent } from '@components'
 import { appColors, appInfors } from '@constants'
 import { ArrowLeft2, ArrowRight2 } from 'iconsax-react-native'
@@ -7,7 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Image, TouchableOpacity } from 'react-native'
 
 interface Props {
-  imagesData: ProductImage[]
+  imagesData?: ProductImage[]
 }
 
 const BUTTON_SIZE = 24
@@ -22,7 +21,6 @@ const CarouselComponent = (props: Props) => {
 
   const imageList: string[] = useMemo(() => {
     if (imagesData) {
-      console.log(imagesData)
       return imagesData.map((productImage) => productImage.productImageUrl)
     }
     return []
@@ -86,7 +84,7 @@ const CarouselComponent = (props: Props) => {
         <Image
           source={{
             uri: `${
-              activeImage.length < 1
+              activeImage === ''
                 ? 'https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ='
                 : activeImage
             }`

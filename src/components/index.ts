@@ -1,4 +1,3 @@
-// import CustomBackdrop from './CustomBackdrop'
 import ButtonComponent from './ButtonComponent'
 import CategoriesComponent from './CategoriesComponent'
 import CircleComponent from './CircleComponent'
@@ -16,9 +15,9 @@ import CustomInput from './Input/CustomInput'
 import StatisticOverviewComponent from './StatisticOverviewComponent'
 import LoadingComponent from './LoadingComponent'
 import CardComponent from './CardComponent'
-import DropdownPickerComponent from './DropdownPickerComponent'
 import DatePickerComponent from './DatePickerComponent'
 import CarouselComponent from './CarouselComponent'
+import DropdownPickerComponent from './DropdownPickerComponent'
 
 export {
   RowComponent,
@@ -38,7 +37,7 @@ export {
   StatisticOverviewComponent,
   LoadingComponent,
   CardComponent,
-  DropdownPickerComponent,
   DatePickerComponent,
-  CarouselComponent
+  CarouselComponent,
+  DropdownPickerComponent
 }

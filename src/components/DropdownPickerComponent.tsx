@@ -1,11 +1,9 @@
-import { View, Text, Modal, FlatList, TouchableOpacity, StyleProp, ViewStyle } from 'react-native'
+import { ButtonComponent, InputComponent, RowComponent, SpaceComponent, TextComponent } from '@components'
+import { appColors, appFonts, appInfors } from '@constants'
+import { ArrowDown2, SearchNormal, TickCircle } from 'iconsax-react-native'
+import { useCallback, useEffect, useState } from 'react'
+import { FlatList, Modal, StyleProp, TouchableOpacity, TouchableWithoutFeedback, View, ViewStyle } from 'react-native'
 import { globalStyles } from 'src/styles/globalStyles'
-import { ArrowDown2, SearchNormal1, TickCircle } from 'iconsax-react-native'
-import { useEffect, useState } from 'react'
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import { appColors, appFonts } from '@constants'
-import SpaceComponent from './SpaceComponent'
-import { ButtonComponent, InputComponent, RowComponent, TextComponent } from '@components'
 
 interface SelectModel {
   label: string
@@ -37,7 +35,7 @@ const DropdownPickerComponent = (props: Props) => {
     if (!searchKey) {
       setResults([])
     } else {
-      const data = items.filter((element) => element.label.toLowerCase().includes(searchKey))
+      const data = items.filter((element) => element.label.toLowerCase().includes(searchKey.toLowerCase()))
 
       setResults(data)
     }
@@ -74,31 +72,31 @@ const DropdownPickerComponent = (props: Props) => {
     }
   }
 
-  const renderSelectedItem = (id: string, index: number) => {
+  const renderSelectedItem = useCallback((id: string, index: number) => {
     const item = items.find((element) => element.value === id)
 
     return (
       item && (
         <RowComponent
           key={id}
-          onPress={() => handleRemoveItemSelected(index)}
+          // onPress={() => handleRemoveItemSelected(index)}
           styles={{
-            marginRight: 6,
-            marginBottom: 8,
-            padding: 6,
-            paddingHorizontal: 10,
-            borderRadius: 100,
-            borderWidth: 0.5,
-            borderColor: appColors.text2
+            // marginRight: 6,
+            // marginBottom: 8,
+            // padding: 6,
+            paddingHorizontal: 6
+            // borderRadius: 100,
+            // borderWidth: 0.5,
+            // borderColor: appColors.text2
           }}
         >
-          <TextComponent text={item.label} flex={0} />
-          <SpaceComponent width={8} />
-          <AntDesign name='close' size={14} color={appColors.text} />
+          <TextComponent text={item.label} flex={0} size={16} styles={{ marginTop: -2 }} />
+          {/* <SpaceComponent width={8} /> */}
+          {/* <AntDesign name='close' size={14} color={appColors.text} /> */}
         </RowComponent>
       )
     )
-  }
+  }, [])
 
   return (
     <View style={[{ marginBottom: 10 }, styles]}>
@@ -120,6 +118,7 @@ const DropdownPickerComponent = (props: Props) => {
           {selected && selected.length > 0 ? (
             <RowComponent justify='flex-start' styles={{ flexWrap: 'wrap' }}>
               {selected.map((id, index) => renderSelectedItem(id, index))}
+              {/* <TextComponent text={selected[0]} /> */}
             </RowComponent>
           ) : (
             <TextComponent text='Select' color={appColors.text2} flex={0} />
@@ -129,54 +128,72 @@ const DropdownPickerComponent = (props: Props) => {
         <ArrowDown2 size={20} color={appColors.text} />
       </RowComponent>
 
-      <Modal visible={isVisible} style={{ flex: 1 }} transparent animationType='slide' statusBarTranslucent>
-        <View
-          style={[
-            globalStyles.container,
-            {
-              padding: 20,
-              paddingTop: 60,
-              paddingBottom: 60
-            }
-          ]}
-        >
-          <FlatList
-            showsVerticalScrollIndicator={false}
-            ListHeaderComponent={
-              <RowComponent styles={{ alignItems: 'center', justifyContent: 'center' }}>
-                <View style={{ flex: 1, marginRight: 12 }}>
-                  <InputComponent
-                    value={searchKey}
-                    onChange={(val) => setSearchKey(val)}
-                    placeholder='Search'
-                    affix={<SearchNormal1 size={20} color={appColors.text2} />}
-                    isAllowClear
-                  />
-                </View>
-                <TouchableOpacity onPress={() => setIsVisible(false)}>
-                  <TextComponent text='Cancel' color='coral' flex={0} />
-                </TouchableOpacity>
-              </RowComponent>
-            }
-            style={{ flex: 1 }}
-            data={searchKey ? results : items}
-            renderItem={({ item }) => (
-              <RowComponent
-                key={item.value}
-                onPress={() => handleSelectItem(item.value)}
-                styles={{ paddingVertical: 16 }}
-              >
-                <TextComponent
-                  size={16}
-                  text={item.label}
-                  color={dataSelected.includes(item.value) ? 'coral' : appColors.text}
-                />
-                {dataSelected.includes(item.value) && <TickCircle size={22} color='coral' />}
-              </RowComponent>
-            )}
-          />
-          <ButtonComponent text='Confirm' onPress={handleConfirmSelect} />
-        </View>
+      <Modal visible={isVisible} style={{ flex: 1 }} transparent animationType='fade' statusBarTranslucent>
+        <TouchableWithoutFeedback onPressOut={() => setIsVisible(false)} style={{ flex: 1 }}>
+          <View
+            style={[
+              {
+                justifyContent: 'center',
+                alignItems: 'center',
+                flex: 1,
+                backgroundColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            ]}
+          >
+            <View
+              style={{
+                width: appInfors.sizes.WIDTH * 0.9,
+                backgroundColor: appColors.White,
+                padding: 20,
+                paddingBottom: 10,
+                borderRadius: 10,
+                height: appInfors.sizes.HEIGHT * 0.6
+              }}
+            >
+              <FlatList
+                showsVerticalScrollIndicator={false}
+                ListHeaderComponent={
+                  <RowComponent styles={{ alignItems: 'center', justifyContent: 'center' }}>
+                    <View style={{ flex: 1, marginRight: 12 }}>
+                      <InputComponent
+                        value={searchKey}
+                        onChange={(val) => setSearchKey(val)}
+                        placeholder='Search'
+                        affix={<SearchNormal size={20} color={appColors.text2} />}
+                        isAllowClear
+                        inputStyles={{ borderRadius: 8 }}
+                      />
+                    </View>
+                    <TouchableOpacity onPress={() => setIsVisible(false)}>
+                      <TextComponent text='Cancel' color='coral' flex={0} />
+                    </TouchableOpacity>
+                  </RowComponent>
+                }
+                style={{}}
+                data={searchKey ? results : items}
+                renderItem={({ item }) => (
+                  <RowComponent
+                    key={item.value}
+                    onPress={() => handleSelectItem(item.value)}
+                    styles={{ paddingVertical: 16 }}
+                    justify='space-between'
+                  >
+                    <TextComponent
+                      size={16}
+                      text={item.label}
+                      font={dataSelected.includes(item.value) ? appFonts.medium : appFonts.regular}
+                      color={dataSelected.includes(item.value) ? appColors.primary : appColors.text}
+                    />
+                    {dataSelected.includes(item.value) && <TickCircle size={22} color={appColors.primary} />}
+                  </RowComponent>
+                )}
+              />
+
+              <SpaceComponent height={10} />
+              <ButtonComponent type='primary' text='Confirm' onPress={handleConfirmSelect} />
+            </View>
+          </View>
+        </TouchableWithoutFeedback>
       </Modal>
     </View>
   )
