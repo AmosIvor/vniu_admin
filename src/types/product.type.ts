@@ -25,3 +25,9 @@ export interface ProductImage {
   productItemId: number
   productItem?: ProductItem
 }
+
+export interface ProductCategory {
+  productCategoryId: number
+  productCategoryName: string
+  parentCategoryId?: number
+}

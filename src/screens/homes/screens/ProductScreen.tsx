@@ -67,6 +67,8 @@ const ProductScreen = ({ navigation }: any) => {
 
         <TextComponent text='Found 10 items' size={14} color={'rgba(0, 0, 0, 0.4)'} />
       </SectionComponent>
+
+      {/* product list */}
       <SectionComponent styles={{ paddingHorizontal: 8, paddingBottom: 6, flex: 1 }}>
         <ListProductComponent items={productItemListData} />
       </SectionComponent>
