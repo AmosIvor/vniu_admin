@@ -18,7 +18,7 @@ interface SelectModel {
   value: string
 }
 
-const ProductDetailScreen = () => {
+const ProductDetailScreen = ({ navigation }: any) => {
   const [productItemData, setProductItemData] = useState<ProductItem>(DATAS.productItemList[0])
   const widthSplit = appInfors.sizes.WIDTH * 0.3
   const widthButton = (appInfors.sizes.WIDTH - 16 * 2 - 40) / 2
@@ -135,6 +135,7 @@ const ProductDetailScreen = () => {
             color={appColors.SilverSand}
             styles={{ width: widthButton }}
             textColor={appColors.text}
+            onPress={() => navigation.goBack()}
           />
           <SpaceComponent width={40} />
           <ButtonComponent type='primary' text='Update' styles={{ width: widthButton }} />
