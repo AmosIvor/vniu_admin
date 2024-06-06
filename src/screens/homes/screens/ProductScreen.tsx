@@ -1,19 +1,12 @@
-import {
-  ButtonComponent,
-  ContainerComponent,
-  RowComponent,
-  SectionComponent,
-  SpaceComponent,
-  TextComponent
-} from '@components'
-import { appColors } from '@constants'
-import { Add, SearchNormal, Sort } from 'iconsax-react-native'
-import { TouchableOpacity } from 'react-native'
-import { globalStyles } from 'src/styles/globalStyles'
-import { ListProductComponent } from '@screens/homes/components'
-import { useEffect, useState } from 'react'
 import { ProductItem } from '@appTypes/product.type'
 import { DATAS } from '@assets'
+import { ContainerComponent, RowComponent, SectionComponent, SpaceComponent, TextComponent } from '@components'
+import { appColors } from '@constants'
+import { ListProductComponent } from '@screens/homes/components'
+import { Add, SearchNormal, Sort } from 'iconsax-react-native'
+import { useEffect, useState } from 'react'
+import { TouchableOpacity } from 'react-native'
+import { globalStyles } from 'src/styles/globalStyles'
 
 const ProductScreen = ({ navigation }: any) => {
   const [productItemListData, setProductItemListData] = useState<ProductItem[]>([])

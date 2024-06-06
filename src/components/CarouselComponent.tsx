@@ -1,11 +1,10 @@
 import { ProductItem } from '@appTypes/product.type'
-import { DATAS, IMAGES } from '@assets'
-import { RowComponent, SectionComponent, SpaceComponent, TextComponent } from '@components'
+import { DATAS } from '@assets'
+import { RowComponent, SectionComponent, SpaceComponent } from '@components'
 import { appColors, appInfors } from '@constants'
-import { ArrowCircleRight, ArrowLeft2, ArrowRight, ArrowRight2 } from 'iconsax-react-native'
+import { ArrowLeft2, ArrowRight2 } from 'iconsax-react-native'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Image, TouchableOpacity, View } from 'react-native'
-import { globalStyles } from 'src/styles/globalStyles'
+import { Image, TouchableOpacity } from 'react-native'
 
 const BUTTON_SIZE = 24
 const PADDING_HORIZONTAL = 16
@@ -116,17 +115,6 @@ const CarouselComponent = () => {
         >
           <ArrowRight2 size={BUTTON_SIZE} color={appColors.text} />
         </TouchableOpacity>
-
-        {/* <TouchableOpacity
-          style={{
-            width: 10,
-            height: 10,
-            borderRadius: 100,
-            borderWidth: 1,
-            borderColor: appColors.primary,
-            backgroundColor: appColors.primary
-          }}
-        ></TouchableOpacity> */}
       </RowComponent>
     </SectionComponent>
   )

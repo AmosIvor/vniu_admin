@@ -1,5 +1,4 @@
 import { ProductItem } from '@appTypes/product.type'
-import { IMAGES } from '@assets'
 import { CardComponent, RowComponent, SpaceComponent, TextComponent } from '@components'
 import { appColors, appFonts, appInfors } from '@constants'
 import { useNavigation } from '@react-navigation/native'

@@ -1,4 +1,3 @@
-import { IMAGES } from '@assets'
 import {
   ButtonComponent,
   CarouselComponent,
@@ -7,11 +6,9 @@ import {
   InputComponent,
   RowComponent,
   SectionComponent,
-  SpaceComponent,
-  TextComponent
+  SpaceComponent
 } from '@components'
 import { appColors, appInfors } from '@constants'
-import { Image } from 'react-native'
 
 interface SelectModel {
   label: string
