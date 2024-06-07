@@ -20,7 +20,7 @@ const StatisticOverviewComponent = (props: Props) => {
         {
           width: widthCalculate,
           borderRadius: 10,
-          backgroundColor: appColors.statistic,
+          backgroundColor: appColors.White,
           paddingHorizontal: 12,
           paddingVertical: 8
         },

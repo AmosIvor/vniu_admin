@@ -16,7 +16,7 @@ const ListOrderComponent = (props: Props) => {
       data={items}
       keyExtractor={(item, index) => index.toString()}
       renderItem={({ item }) => (
-        <OrderItemComponent item={item} key={item.orderId} styles={{ padding: 10, backgroundColor: '#FFF7FC' }} />
+        <OrderItemComponent item={item} key={item.orderId} styles={{ padding: 10, backgroundColor: appColors.White }} />
       )}
     />
   )

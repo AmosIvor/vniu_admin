@@ -50,6 +50,44 @@
           "productItemCode": 2,
           "productImages": []
         }
+      },
+      {
+        "orderLineId": 9,
+        "quantity": 1,
+        "price": 100,
+        "orderId": 4,
+        "productItemId": 210,
+        "variationId": 2,
+        "productItem": {
+          "productItemId": 210,
+          "productId": 3,
+          "colourId": 3,
+          "originalPrice": 120,
+          "salePrice": 100,
+          "productItemSold": 0,
+          "productItemRating": 5,
+          "productItemCode": 2,
+          "productImages": []
+        }
+      },
+      {
+        "orderLineId": 10,
+        "quantity": 1,
+        "price": 100,
+        "orderId": 4,
+        "productItemId": 210,
+        "variationId": 2,
+        "productItem": {
+          "productItemId": 210,
+          "productId": 3,
+          "colourId": 3,
+          "originalPrice": 120,
+          "salePrice": 100,
+          "productItemSold": 0,
+          "productItemRating": 5,
+          "productItemCode": 2,
+          "productImages": []
+        }
       }
     ]
   },
