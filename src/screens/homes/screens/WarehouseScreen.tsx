@@ -3,7 +3,6 @@ import { ButtonComponent, ContainerComponent, SectionComponent } from '@componen
 import { ModalWebView } from '@modals'
 import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
-import { Alert, Linking } from 'react-native'
 
 const WarehouseScreen = ({ navigation }: any) => {
   const [isShowModalWebView, setIsShowModalWebView] = useState(false)
@@ -19,11 +18,12 @@ const WarehouseScreen = ({ navigation }: any) => {
         orderTotal: 15,
         orderDescription: 'Nice to have',
         userId: 'CS0001',
-        isVnPay: false
+        isVnPay: true
       },
       {
         onSuccess: async (data) => {
           const url = data.data.data
+          console.log('url: ', url)
           setPaymentUrl(url)
           setIsShowModalWebView(true)
         },
@@ -43,6 +43,7 @@ const WarehouseScreen = ({ navigation }: any) => {
           isVisible={isShowModalWebView}
           setIsVisible={setIsShowModalWebView}
           setWebViewUrl={setPaymentUrl}
+          orderId={1}
         />
       </SectionComponent>
     </ContainerComponent>

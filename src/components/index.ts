@@ -18,6 +18,7 @@ import CardComponent from './CardComponent'
 import DatePickerComponent from './DatePickerComponent'
 import CarouselComponent from './CarouselComponent'
 import DropdownPickerComponent from './DropdownPickerComponent'
+import StepIndicatorComponent from './StepIndicatorComponent'
 
 export {
   RowComponent,
@@ -39,5 +40,6 @@ export {
   CardComponent,
   DatePickerComponent,
   CarouselComponent,
-  DropdownPickerComponent
+  DropdownPickerComponent,
+  StepIndicatorComponent
 }

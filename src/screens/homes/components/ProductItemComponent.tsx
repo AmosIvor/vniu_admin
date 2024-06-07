@@ -21,7 +21,9 @@ const ProductItemComponent = (props: Props) => {
     <CardComponent
       isShadow
       styles={styles}
-      onPress={() => navigation.navigate('HomeNavigator', { screen: 'ProductDetailScreen', id: item.productItemId })}
+      onPress={() =>
+        navigation.navigate('HomeNavigator', { screen: 'ProductDetailScreen', params: { id: item.productItemId } })
+      }
     >
       <View
         style={{
