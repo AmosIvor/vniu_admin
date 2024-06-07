@@ -3,7 +3,7 @@ import { appColors } from '@constants'
 import { ProductOrderedComponent } from '@screens/orders/components'
 import { useEffect } from 'react'
 import { FlatList, ScrollView } from 'react-native'
-
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 interface Props {
   items: OrderLine[]
 }
@@ -19,7 +19,7 @@ const ListProductOrderedComponent = (props: Props) => {
     <ScrollView
       scrollEnabled={false}
       horizontal={true}
-      style={{ flex: 1, backgroundColor: 'yellow', width: '100%', minHeight: 100 }}
+      style={{ flex: 1, backgroundColor: 'yellow', width: '100%', maxHeight: hp(20) }}
     >
       <FlatList
         numColumns={1}
@@ -30,7 +30,7 @@ const ListProductOrderedComponent = (props: Props) => {
           <ProductOrderedComponent
             item={item}
             key={item.orderLineId}
-            styles={{ padding: 16, backgroundColor: appColors.White, borderRadius: 8 }}
+            styles={{ padding: wp(1), backgroundColor: appColors.White, borderRadius: 8, width: wp(90) }}
           />
         )}
       />
