@@ -1,4 +1,5 @@
 import ModalFiltering from './ModalFiltering'
 import ModalLoading from './ModalLoading'
+import ModalWebView from './ModalWebView'
 
-export { ModalLoading, ModalFiltering }
+export { ModalLoading, ModalFiltering, ModalWebView }

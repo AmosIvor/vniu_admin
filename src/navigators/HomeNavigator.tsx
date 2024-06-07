@@ -3,6 +3,7 @@ import {
   CatelogAddScreen,
   CatelogScreen,
   CommentScreen,
+  DonePaymentScreen,
   ProductAddScreen,
   ProductDetailScreen,
   ProductScreen,
@@ -21,6 +22,8 @@ type RootStackParamList = {
 
   CommentScreen: undefined
   WarehouseScreen: undefined
+
+  DonePaymentScreen: undefined
 }
 
 const HomeNavigator = () => {
@@ -37,6 +40,8 @@ const HomeNavigator = () => {
 
       <Stack.Screen name='CommentScreen' component={CommentScreen} />
       <Stack.Screen name='WarehouseScreen' component={WarehouseScreen} />
+
+      <Stack.Screen name='DonePaymentScreen' component={DonePaymentScreen} />
     </Stack.Navigator>
   )
 }
