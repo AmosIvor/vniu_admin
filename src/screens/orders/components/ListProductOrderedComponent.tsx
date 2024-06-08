@@ -1,7 +1,6 @@
 import { OrderLine } from '@appTypes/order.type'
-import { appColors } from '@constants'
+import { appColors, appInfors } from '@constants'
 import { ProductOrderedComponent } from '@screens/orders/components'
-import { useEffect } from 'react'
 import { FlatList, ScrollView } from 'react-native'
 
 interface Props {
@@ -10,16 +9,12 @@ interface Props {
 
 const ListProductOrderedComponent = (props: Props) => {
   const { items } = props
-  useEffect(() => {
-    console.log('items', items)
-    console.log(items.length)
-  }, [])
 
   return (
     <ScrollView
       scrollEnabled={false}
       horizontal={true}
-      style={{ flex: 1, backgroundColor: 'yellow', width: '100%', minHeight: 100 }}
+      style={{ flex: 1, width: '100%', minHeight: appInfors.sizes.HEIGHT * 0.1 }}
     >
       <FlatList
         numColumns={1}
@@ -30,7 +25,12 @@ const ListProductOrderedComponent = (props: Props) => {
           <ProductOrderedComponent
             item={item}
             key={item.orderLineId}
-            styles={{ padding: 16, backgroundColor: appColors.White, borderRadius: 8 }}
+            styles={{
+              padding: 16,
+              backgroundColor: appColors.White,
+              borderRadius: 8,
+              width: appInfors.sizes.WIDTH - 16 * 2
+            }}
           />
         )}
       />

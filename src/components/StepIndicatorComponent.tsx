@@ -2,9 +2,14 @@ import { appColors, appFonts } from '@constants'
 import { useState } from 'react'
 import StepIndicator from 'react-native-step-indicator'
 
-const StepIndicatorComponent = () => {
-  const [currentPosition, setCurrentPosition] = useState(0)
-  const labels = ['Cart', 'Delivery Address', 'Order Summary', 'Payment Method', 'Track']
+interface Props {
+  currentPosition: number
+}
+
+const StepIndicatorComponent = (props: Props) => {
+  const { currentPosition } = props
+
+  const labels = ['Pending', 'Confirmed', 'In Progress', 'Delivered']
 
   const customStyles = {
     stepIndicatorSize: 26,
@@ -31,6 +36,13 @@ const StepIndicatorComponent = () => {
     labelFontFamily: appFonts.regular
   }
 
-  return <StepIndicator customStyles={customStyles} currentPosition={currentPosition} labels={labels} />
+  return (
+    <StepIndicator
+      customStyles={customStyles}
+      currentPosition={currentPosition}
+      labels={labels}
+      stepCount={labels.length}
+    />
+  )
 }
 export default StepIndicatorComponent

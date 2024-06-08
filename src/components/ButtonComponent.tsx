@@ -47,7 +47,7 @@ const ButtonComponent = (props: Props) => {
           globalStyles.button,
           globalStyles.shadow,
           {
-            backgroundColor: color ? color : isDisable ? appColors.text2 : appColors.primary,
+            backgroundColor: color ? color : isDisable ? appColors.SilverSand : appColors.primary,
             marginBottom: 10,
             width: '100%'
           },
@@ -59,7 +59,7 @@ const ButtonComponent = (props: Props) => {
         {text && (
           <TextComponent
             text={text}
-            color={textColor ?? appColors.bgPrimary}
+            color={textColor ? textColor : isDisable ? appColors.SecondaryColorText : appColors.bgPrimary}
             styles={[
               {
                 marginLeft: icon ? 12 : 0,

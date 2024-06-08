@@ -1,6 +1,6 @@
 import { CardComponent, RowComponent, SpaceComponent, TextComponent } from '@components'
-import { appColors } from '@constants'
-import { View, Text, ViewStyle, StyleProp } from 'react-native'
+import { appColors, appFonts } from '@constants'
+import { StyleProp, ViewStyle } from 'react-native'
 
 interface Props {
   styles?: StyleProp<ViewStyle>
@@ -20,6 +20,7 @@ const OrderInformationComponent = (props: Props) => {
           color={appColors.text}
           styles={{ width: '60%' }}
           numberOfLine={1}
+          font={appFonts.medium}
         />
       </RowComponent>
 
@@ -34,6 +35,7 @@ const OrderInformationComponent = (props: Props) => {
           color={appColors.text}
           styles={{ width: '60%' }}
           numberOfLine={1}
+          font={appFonts.medium}
         />
       </RowComponent>
 
@@ -48,6 +50,7 @@ const OrderInformationComponent = (props: Props) => {
           color={appColors.text}
           styles={{ width: '60%' }}
           numberOfLine={2}
+          font={appFonts.medium}
         />
       </RowComponent>
     </CardComponent>
