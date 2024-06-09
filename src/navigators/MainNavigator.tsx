@@ -1,4 +1,4 @@
-import { HomeNavigator, OrderNavigator, TabsNavigator } from '@navigators'
+import { HomeNavigator, OrderNavigator, StatisticNavigator, TabsNavigator } from '@navigators'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import NotFoundScreen from '@screens/NotFoundScreen'
 
@@ -8,6 +8,7 @@ type RootStackParamList = {
 
   HomeNavigator: undefined
   OrderNavigator: undefined
+  StatisticNavigator: undefined
 }
 
 const MainNavigator = () => {
@@ -19,6 +20,7 @@ const MainNavigator = () => {
 
       <Stack.Screen name='HomeNavigator' component={HomeNavigator} />
       <Stack.Screen name='OrderNavigator' component={OrderNavigator} />
+      <Stack.Screen name='StatisticNavigator' component={StatisticNavigator} />
     </Stack.Navigator>
   )
 }
