@@ -42,7 +42,12 @@ const StatisticMonthComponent = (props: Props) => {
       }
       activeOpacity={0.8}
     >
-      <TextComponent text={title ?? 'SHIRT TOP-SELLING'} color={appColors.text} size={17} font={appFonts.medium} />
+      <TextComponent
+        text={title ? title.toUpperCase() : 'SHIRT TOP-SELLING'}
+        color={appColors.text}
+        size={17}
+        font={appFonts.medium}
+      />
       <SpaceComponent height={10} />
       <RowComponent justify='space-between'>
         <TextComponent text={content ?? 'Loose Shirt'} color={appColors.primary} size={19} font={appFonts.medium} />

@@ -46,7 +46,7 @@ const ChatScreen = () => {
 
   useEffect(() => {
     if (messagesData) {
-      console.log(messagesData)
+      // console.log(messagesData)
       setMessages([
         ...messagesData.data.data.map((msg) => {
           return {
@@ -71,7 +71,7 @@ const ChatScreen = () => {
     // http://vniuapi20240429122410.azurewebsites.net/chathub
     const connect = new HubConnectionBuilder()
       .configureLogging(LogLevel.Debug)
-      .withUrl('http://10.0.2.2:5000/chathub', {
+      .withUrl('http://vniuapi20240429122410.azurewebsites.net/chathub', {
         skipNegotiation: true,
         transport: HttpTransportType.WebSockets
       })
@@ -93,7 +93,7 @@ const ChatScreen = () => {
         .then(() => {
           connection.on('ReceiveMessage', (message: MessageResponseType) => {
             // handle chatroom id by checking chatroom id
-            console.log(chatRoomData)
+            // console.log(chatRoomData)
             const messageCustom = [
               {
                 _id: message.messageId,

@@ -38,15 +38,11 @@ const StatisticScreen = () => {
 
       {/* month statistic */}
       <SectionComponent>
-        <StatisticMonthComponent />
+        <StatisticMonthComponent title='Top Revenue Product' content='Loose Shirt' />
 
         <SpaceComponent height={10} />
 
-        <StatisticMonthComponent />
-
-        <SpaceComponent height={10} />
-
-        <StatisticMonthComponent />
+        <StatisticMonthComponent title='Top Volume Product' />
       </SectionComponent>
     </ContainerComponent>
   )

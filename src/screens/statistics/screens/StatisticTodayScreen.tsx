@@ -35,6 +35,11 @@ const StatisticTodayScreen = ({ navigation, route }: any) => {
           />
         </RowComponent>
       </SectionComponent>
+
+      {/* statistics */}
+      <SectionComponent styles={{ paddingBottom: 10 }}>
+        <TextComponent text='Statistics' font={appFonts.medium} size={19} color={appColors.text} />
+      </SectionComponent>
     </ContainerComponent>
   )
 }
