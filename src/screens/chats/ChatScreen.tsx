@@ -41,7 +41,7 @@ const ChatScreen = () => {
   })
 
   const sendMessageMutation = useMutation({
-    mutationFn: chatApi.sendMessageByUser
+    mutationFn: chatApi.sendMessageByAdmin
   })
 
   useEffect(() => {
@@ -67,6 +67,8 @@ const ChatScreen = () => {
   }, [messagesData])
 
   useEffect(() => {
+    // http://10.0.2.2:5000/chathub
+    // http://vniuapi20240429122410.azurewebsites.net/chathub
     const connect = new HubConnectionBuilder()
       .configureLogging(LogLevel.Debug)
       .withUrl('http://10.0.2.2:5000/chathub', {
@@ -121,13 +123,13 @@ const ChatScreen = () => {
   }, [connection, userId])
 
   const onSend = useCallback((messages: IMessage[]) => {
-    // setMessages((prevMsg) => GiftedChat.append(prevMsg, messages))
+    setMessages((prevMsg) => GiftedChat.append(prevMsg, messages))
     // console.log(messages)
     sendMessageMutation.mutate(
       {
         userId,
         body: {
-          isFromUser: true,
+          isFromUser: false,
           isRead: true,
           messageContent: messages[0].text,
           imageUrl: messages[0].image

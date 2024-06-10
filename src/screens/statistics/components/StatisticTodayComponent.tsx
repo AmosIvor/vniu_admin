@@ -1,7 +1,9 @@
 import { RowComponent, SpaceComponent, TextComponent } from '@components'
 import { appColors, appFonts, appInfors } from '@constants'
 import { useNavigation } from '@react-navigation/native'
+import { capitalizeFirstLetter } from '@utils'
 import { ArrowRight2 } from 'iconsax-react-native'
+import { useEffect } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import { globalStyles } from 'src/styles/globalStyles'
 
@@ -11,11 +13,12 @@ interface Props {
   percent?: number
   isIncreased?: boolean
   contentCompare?: string
+  isCapitalizeFirstLetter?: boolean
   onPress?: () => void
 }
 
 const StatisticTodayComponent = (props: Props) => {
-  const { content, statistic, percent, isIncreased = true, contentCompare, onPress } = props
+  const { content, statistic, percent, isIncreased = true, contentCompare, onPress, isCapitalizeFirstLetter } = props
   const widthCalculate = (appInfors.sizes.WIDTH - 16 * 2 - 16) / 2
   const percentCalculate = isIncreased ? `+${percent}%` : `-${percent}%`
 
@@ -41,14 +44,20 @@ const StatisticTodayComponent = (props: Props) => {
             params: {
               title: content ?? '',
               statistic: statistic ?? 0,
-              percentCalculate: percentCalculate ?? 0,
+              percent: percent ?? 0,
               isIncreased: isIncreased
             }
           }))
       }
       activeOpacity={0.8}
     >
-      <TextComponent text={content ?? 'ORDER'} font={appFonts.medium} size={17} color={appColors.text} />
+      <TextComponent
+        text={content ? (isCapitalizeFirstLetter ? content : content.toUpperCase()) : 'ORDER'}
+        font={appFonts.medium}
+        size={17}
+        color={appColors.text}
+        numberOfLine={1}
+      />
 
       <SpaceComponent height={4} />
 
