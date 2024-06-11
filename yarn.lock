@@ -5704,6 +5704,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gifted-charts-core@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "gifted-charts-core@npm:0.1.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/e9d1df43f0b3d5823016c91b46355bd4d8c711d781d819ff793d9004c685c93bbac256c7b796e9831d7bc7bf2a813fdcd6f0b1f72de261169699f203ecf23b86
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -8789,6 +8799,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-gifted-charts@npm:^1.4.10":
+  version: 1.4.10
+  resolution: "react-native-gifted-charts@npm:1.4.10"
+  dependencies:
+    gifted-charts-core: "npm:^0.1.4"
+  peerDependencies:
+    expo-linear-gradient: "*"
+    react: "*"
+    react-native: "*"
+    react-native-linear-gradient: "*"
+    react-native-svg: "*"
+  peerDependenciesMeta:
+    expo-linear-gradient:
+      optional: true
+    react-native-linear-gradient:
+      optional: true
+  checksum: 10c0/72923d295eb09d07e293c0f3a4c3b51e0485956b22e66500b5dde5afe039104ac074946ef58d28ac77fc16b74006d5e2292ee4ce984c293fbdaeef21d02f18b9
+  languageName: node
+  linkType: hard
+
 "react-native-gifted-chat@npm:^2.4.0":
   version: 2.4.0
   resolution: "react-native-gifted-chat@npm:2.4.0"
@@ -8826,6 +8856,16 @@ __metadata:
     react: ">=16.8.0"
     react-native: ">=0.61.0"
   checksum: 10c0/86125911f78c8292f84851dcdcca06fc606afcc3d4e9a0dd84dee94edc665aa3d519ebb6c64014320d5855e4a77a83b129ac511059ed32e55f6082b11c46a69b
+  languageName: node
+  linkType: hard
+
+"react-native-linear-gradient@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "react-native-linear-gradient@npm:2.8.3"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/cd41bf28e9f468173f1e5e768685128ebf8bbf9077710e43b63482c1a76f37bff8ab3d1d6adfd7b4d54e648672356c02bea46c47cdbdb1844ebe5c5caf720114
   languageName: node
   linkType: hard
 
@@ -10536,7 +10576,9 @@ __metadata:
     react-native-dropdown-picker: "npm:^5.4.6"
     react-native-element-dropdown: "npm:^2.10.4"
     react-native-gesture-handler: "npm:^2.15.0"
+    react-native-gifted-charts: "npm:^1.4.10"
     react-native-gifted-chat: "npm:^2.4.0"
+    react-native-linear-gradient: "npm:^2.8.3"
     react-native-modalize: "npm:^2.1.1"
     react-native-portalize: "npm:^1.0.7"
     react-native-reanimated: "npm:^3.7.2"

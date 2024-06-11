@@ -41,6 +41,16 @@ export const globalStyles = StyleSheet.create({
     elevation: 8
   },
 
+  shadowStatistic: {
+    shadowColor: 'rgba(0, 0, 0)',
+    shadowOffset: {
+      width: 0,
+      height: 4
+    },
+    shadowOpacity: 0.5,
+    elevation: 8
+  },
+
   tag: {
     paddingVertical: 8,
     paddingHorizontal: 12,

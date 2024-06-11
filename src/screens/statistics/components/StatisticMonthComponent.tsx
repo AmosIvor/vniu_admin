@@ -29,16 +29,17 @@ const StatisticMonthComponent = (props: Props) => {
         globalStyles.shadowCustom
       ]}
       onPress={
-        onPress ??
-        (() =>
-          navigation.navigate('StatisticNavigator', {
-            screen: 'StatisticMonthScreen',
-            params: {
-              title: title ?? '',
-              content: content ?? '',
-              isNext: false
-            }
-          }))
+        onPress
+          ? () =>
+              navigation.navigate('StatisticNavigator', {
+                screen: 'StatisticMonthScreen',
+                params: {
+                  title: title ?? '',
+                  content: content ?? '',
+                  isNext: false
+                }
+              })
+          : () => {}
       }
       activeOpacity={0.8}
     >

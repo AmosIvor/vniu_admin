@@ -13,21 +13,27 @@ const StatisticScreen = () => {
       {/* today statistic */}
       <SectionComponent>
         <RowComponent>
-          <StatisticTodayComponent content='VISITORS' isIncreased percent={20} statistic='10' />
+          <StatisticTodayComponent content='VISITORS' isIncreased percent={20} statistic='10' onPress={() => {}} />
 
           <SpaceComponent width={16} />
 
-          <StatisticTodayComponent content='orders' isIncreased={false} percent={9} statistic='6' />
+          <StatisticTodayComponent content='orders' isIncreased={false} percent={9} statistic='6' onPress={() => {}} />
         </RowComponent>
 
         <SpaceComponent height={20} />
 
         <RowComponent>
-          <StatisticTodayComponent content='REVENUE' isIncreased={false} percent={7} statistic='17 $' />
+          <StatisticTodayComponent
+            content='REVENUE'
+            isIncreased={false}
+            percent={7}
+            statistic='17 $'
+            onPress={() => {}}
+          />
 
           <SpaceComponent width={16} />
 
-          <StatisticTodayComponent content='Product Sold' isIncreased percent={11} statistic='10' />
+          <StatisticTodayComponent content='Product Sold' isIncreased percent={11} statistic='10' onPress={() => {}} />
         </RowComponent>
       </SectionComponent>
 
@@ -38,11 +44,11 @@ const StatisticScreen = () => {
 
       {/* month statistic */}
       <SectionComponent>
-        <StatisticMonthComponent title='Top Revenue Product' content='Loose Shirt' />
+        <StatisticMonthComponent title='Top Revenue Product' content='Loose Shirt' onPress={() => {}} />
 
         <SpaceComponent height={10} />
 
-        <StatisticMonthComponent title='Top Volume Product' />
+        <StatisticMonthComponent title='Top Volume Product' onPress={() => {}} />
       </SectionComponent>
     </ContainerComponent>
   )

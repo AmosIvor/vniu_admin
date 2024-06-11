@@ -37,17 +37,18 @@ const StatisticTodayComponent = (props: Props) => {
         globalStyles.shadowCustom
       ]}
       onPress={
-        onPress ??
-        (() =>
-          navigation.navigate('StatisticNavigator', {
-            screen: 'StatisticTodayScreen',
-            params: {
-              title: content ?? '',
-              statistic: statistic ?? 0,
-              percent: percent ?? 0,
-              isIncreased: isIncreased
-            }
-          }))
+        onPress
+          ? () =>
+              navigation.navigate('StatisticNavigator', {
+                screen: 'StatisticTodayScreen',
+                params: {
+                  title: content ?? '',
+                  statistic: statistic ?? 0,
+                  percent: percent ?? 0,
+                  isIncreased: isIncreased
+                }
+              })
+          : () => {}
       }
       activeOpacity={0.8}
     >

@@ -1,7 +1,7 @@
 import { ContainerComponent, RowComponent, SectionComponent, SpaceComponent, TextComponent } from '@components'
 import { appColors, appFonts } from '@constants'
 import { useEffect } from 'react'
-import { StatisticTodayComponent } from '@screens/statistics/components'
+import { LineChartComponent, StatisticTodayComponent } from '@screens/statistics/components'
 import { capitalizeFirstLetter } from '@utils'
 
 const StatisticTodayScreen = ({ navigation, route }: any) => {
@@ -39,6 +39,10 @@ const StatisticTodayScreen = ({ navigation, route }: any) => {
       {/* statistics */}
       <SectionComponent styles={{ paddingBottom: 10 }}>
         <TextComponent text='Statistics' font={appFonts.medium} size={19} color={appColors.text} />
+      </SectionComponent>
+
+      <SectionComponent styles={{ paddingLeft: 8 }}>
+        <LineChartComponent />
       </SectionComponent>
     </ContainerComponent>
   )
