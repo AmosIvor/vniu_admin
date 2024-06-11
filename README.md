@@ -1,79 +1,70 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+﻿![UIT](https://img.shields.io/badge/from-UIT%20VNUHCM-blue?style=for-the-badge&link=https%3A%2F%2Fwww.uit.edu.vn%2F)
 
-# Getting Started
+# VNIU - Role: Admin (React Native)
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+**Contributors**:
 
-## Step 1: Start the Metro Server
+- Member: Tran Tuan Vu - 21522807 - [Github](https://github.com/AmosIvor)
+- Member: Nguyen Trong Ninh - 22521252 - [Github](https://github.com/Ninhnon)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+**Supervisors**:
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- Nguyen Thi Thanh Truc - [Email](trucntt@uit.edu.vn)
 
-```bash
-# using npm
-npm start
+**Description**:
 
-# OR using Yarn
-yarn start
-```
+The React Native app, developed using Typescript, will serve as the client-facing interface for the cloth shopping application. The app will have an admin role, providing advanced functionalities for managing the application, including:
 
-## Step 2: Start your Application
+- Product management: Admins can add, update, and remove clothing products, and manage details, inventory, and pricing.
+- User management: Admins can view, modify, and deactivate user accounts.
+- Order management: Admins can monitor and manage customer orders, including status, shipping, and fulfillment.
+- Analytics and reporting: Admins can access data and analytics related to product sales, customer behavior, and other key metrics.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+The React Native app will communicate with the backend .NET API to handle data-related operations and business logic. By leveraging React Native, the app will provide a seamless and responsive user experience across iOS and Android platforms.
 
-### For Android
+**How to use**:
 
-```bash
-# using npm
-npm run android
+1. Clone the repository:
 
-# OR using Yarn
-yarn android
-```
+   ```bash
+   git clone https://github.com/AmosIvor/vniu_admin
+   ```
 
-### For iOS
+2. Navigate to the project directory:
 
-```bash
-# using npm
-npm run ios
+   ```bash
+   cd vniu_admin
+   ```
 
-# OR using Yarn
-yarn ios
-```
+3. Install the required packages:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+   ```bash
+   yarn i
+   ```
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+4. Start project:
 
-## Step 3: Modifying your App
+   ```bash
+   yarn start
+   ```
 
-Now that you have successfully run the app, let's modify it.
+5. Run the project:
+   After you Start project in step 4, menu will be displayed
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- Typing `a` if you want to run on Android
+- Typeing `i` if you want to run on iOS
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+**Additional information**:
 
-## Congratulations! :tada:
+- If you have trouble with the process of installing and running the application, please contact [21521252@gm.uit.edu.vn](mailto:21521252@gm.uit.edu.vn) or [21522807@gm.uit.edu.vn](mailto:21522807@gm.uit.edu.vn) for assistance.
 
-You've successfully run and modified your React Native App. :partying_face:
+**Code of Conduct**:
 
-### Now what?
+- Be respectful and considerate in communication.
+- Provide constructive feedback.
+- Follow the project's guidelines and standards.
+- Report any unacceptable behavior to the project maintainers.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+**License**:
 
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
