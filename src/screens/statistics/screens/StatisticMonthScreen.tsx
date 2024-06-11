@@ -1,7 +1,6 @@
 import { ContainerComponent, SectionComponent, TextComponent } from '@components'
 import { appColors, appFonts } from '@constants'
-import { View, Text } from 'react-native'
-import { StatisticMonthComponent } from '@screens/statistics/components'
+import { StatisticMonthComponent, PieChartComponent } from '@screens/statistics/components'
 const StatisticMonthScreen = ({ navigation, route }: any) => {
   return (
     <ContainerComponent isBack title={`${route.params.title}`}>
@@ -18,6 +17,8 @@ const StatisticMonthScreen = ({ navigation, route }: any) => {
       <SectionComponent styles={{ paddingBottom: 10 }}>
         <TextComponent text='Statistics' font={appFonts.medium} size={19} color={appColors.text} />
       </SectionComponent>
+
+      <PieChartComponent />
     </ContainerComponent>
   )
 }

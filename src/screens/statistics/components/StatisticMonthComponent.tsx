@@ -1,5 +1,5 @@
 import { RowComponent, SpaceComponent, TextComponent } from '@components'
-import { appColors, appFonts } from '@constants'
+import { appColors, appFonts, appInfors } from '@constants'
 import { useNavigation } from '@react-navigation/native'
 import { ArrowRight2 } from 'iconsax-react-native'
 import { TouchableOpacity, View } from 'react-native'

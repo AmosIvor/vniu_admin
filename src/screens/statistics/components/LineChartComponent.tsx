@@ -1,9 +1,8 @@
 import { TextComponent } from '@components'
 import { appColors, appFonts, appInfors } from '@constants'
 import React, { useState } from 'react'
-import { View, Text, Alert } from 'react-native'
+import { View } from 'react-native'
 import { LineChart } from 'react-native-gifted-charts'
-import { globalStyles } from 'src/styles/globalStyles'
 const dPoint = () => {
   return (
     <View
@@ -29,86 +28,86 @@ const customLabel = (val: string) => {
 
 const latestData = [
   {
-    value: 100,
-    labelComponent: () => customLabel('22 Nov'),
+    value: 17,
+    labelComponent: () => customLabel('1/6'),
     customDataPoint: dPoint
   },
   {
-    value: 120,
+    value: 9,
     hideDataPoint: true
   },
   {
-    value: 210,
+    value: 15,
     customDataPoint: dPoint
   },
   {
-    value: 250,
+    value: 19,
     hideDataPoint: true
   },
   {
-    value: 320,
-    labelComponent: () => customLabel('24 Nov'),
+    value: 10,
+    labelComponent: () => customLabel('4/6'),
     customDataPoint: dPoint
   },
   {
-    value: 310,
+    value: 23,
     hideDataPoint: true
   },
   {
-    value: 270,
+    value: 17,
     customDataPoint: dPoint
   },
   {
-    value: 240,
+    value: 27,
     hideDataPoint: true
   },
   {
-    value: 130,
-    labelComponent: () => customLabel('26 Nov'),
+    value: 21,
+    labelComponent: () => customLabel('7/6'),
     customDataPoint: dPoint
   },
   {
-    value: 120,
+    value: 29,
     hideDataPoint: true
   },
   {
-    value: 100,
+    value: 41,
     customDataPoint: dPoint
   },
   {
-    value: 210,
+    value: 47,
     hideDataPoint: true
   },
   {
-    value: 270,
-    labelComponent: () => customLabel('28 Nov'),
+    value: 23,
+    labelComponent: () => customLabel('10/6'),
     customDataPoint: dPoint
   },
   {
-    value: 240,
+    value: 27,
     hideDataPoint: true
   },
   {
-    value: 120,
+    value: 37,
     hideDataPoint: true
   },
   {
-    value: 100,
+    value: 41,
     customDataPoint: dPoint
   },
   {
-    value: 210,
-    labelComponent: () => customLabel('30 Nov'),
-    customDataPoint: dPoint
-  },
-  {
-    value: 20,
-    hideDataPoint: true
-  },
-  {
-    value: 100,
+    value: 10,
+    labelComponent: () => customLabel('13/6'),
     customDataPoint: dPoint
   }
+  // {
+  //   value: 20,
+  //   hideDataPoint: true
+  // },
+  // {
+  //   value: 10,
+  //   customDataPoint: dPoint
+  // }
 ]
 
 const LineChartComponent = () => {
@@ -129,7 +128,7 @@ const LineChartComponent = () => {
           thickness={3}
           color={appColors.primary}
           width={appInfors.sizes.WIDTH - 87}
-          maxValue={600}
+          maxValue={60}
           noOfSections={3}
           animateOnDataChange
           animationDuration={1000}
