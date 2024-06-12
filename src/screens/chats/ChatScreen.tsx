@@ -71,7 +71,7 @@ const ChatScreen = () => {
     // http://vniuapi20240429122410.azurewebsites.net/chathub
     const connect = new HubConnectionBuilder()
       .configureLogging(LogLevel.Debug)
-      .withUrl('http://vniuapi20240429122410.azurewebsites.net/chathub', {
+      .withUrl('http://10.0.2.2:5000/chathub', {
         skipNegotiation: true,
         transport: HttpTransportType.WebSockets
       })
@@ -94,10 +94,11 @@ const ChatScreen = () => {
           connection.on('ReceiveMessage', (message: MessageResponseType) => {
             // handle chatroom id by checking chatroom id
             // console.log(chatRoomData)
-            const messageCustom = [
+            const messageCustom: IMessage[] = [
               {
                 _id: message.messageId,
                 text: message.messageContent,
+                image: message.imageUrl ? message.imageUrl : undefined,
                 createdAt: new Date(message.messageCreateAt),
                 user: {
                   _id: message.isFromUser === false ? 1 : 0,
@@ -123,7 +124,7 @@ const ChatScreen = () => {
   }, [connection, userId])
 
   const onSend = useCallback((messages: IMessage[]) => {
-    setMessages((prevMsg) => GiftedChat.append(prevMsg, messages))
+    // setMessages((prevMsg) => GiftedChat.append(prevMsg, messages))
     // console.log(messages)
     sendMessageMutation.mutate(
       {
@@ -132,7 +133,9 @@ const ChatScreen = () => {
           isFromUser: false,
           isRead: true,
           messageContent: messages[0].text,
-          imageUrl: messages[0].image
+          // imageUrl: messages[0].image
+          imageUrl:
+            'https://png.pngitem.com/pimgs/s/13-137202_cargo-pants-bermuda-shorts-clothing-transparent-cargo-shorts.png'
         }
       },
       {
