@@ -59,11 +59,11 @@ const HomeScreen = ({ navigation }: any) => {
       {/* Overview Statistics */}
       <SectionComponent>
         <RowComponent>
-          <StatisticOverviewComponent />
+          <StatisticOverviewComponent content='Today Visitors' statistic='17' percent={12} />
 
           <SpaceComponent width={16} />
 
-          <StatisticOverviewComponent />
+          <StatisticOverviewComponent content='Today Orders' statistic='9' percent={25} isIncreased={false} />
         </RowComponent>
       </SectionComponent>
 
@@ -77,7 +77,7 @@ const HomeScreen = ({ navigation }: any) => {
         <RowComponent>
           <ManagingAreaComponent
             title='Products'
-            bgColor={appColors.CornflowerBlue}
+            bgColor={appColors.primary}
             onPress={() => navigation.navigate('HomeNavigator', { screen: 'ProductScreen' })}
           />
 
@@ -85,7 +85,7 @@ const HomeScreen = ({ navigation }: any) => {
 
           <ManagingAreaComponent
             title='Catelogs'
-            bgColor={appColors.CornflowerBlue}
+            bgColor='#FF7F97'
             onPress={() => navigation.navigate('HomeNavigator', { screen: 'CatelogScreen' })}
           />
         </RowComponent>
@@ -95,7 +95,7 @@ const HomeScreen = ({ navigation }: any) => {
         <RowComponent>
           <ManagingAreaComponent
             title='Comments'
-            bgColor={appColors.CornflowerBlue}
+            bgColor='#8F80F3'
             onPress={() => navigation.navigate('HomeNavigator', { screen: 'CommentScreen' })}
           />
 
@@ -103,7 +103,7 @@ const HomeScreen = ({ navigation }: any) => {
 
           <ManagingAreaComponent
             title='Warehouses'
-            bgColor={appColors.CornflowerBlue}
+            bgColor='#3BE9DE'
             onPress={() => navigation.navigate('HomeNavigator', { screen: 'WarehouseScreen' })}
           />
         </RowComponent>

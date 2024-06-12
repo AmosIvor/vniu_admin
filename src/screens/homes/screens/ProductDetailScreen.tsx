@@ -18,8 +18,8 @@ interface SelectModel {
   value: string
 }
 
-const ProductDetailScreen = ({ navigation }: any) => {
-  const [productItemData, setProductItemData] = useState<ProductItem>(DATAS.productItemList[0])
+const ProductDetailScreen = ({ navigation, route }: any) => {
+  const [productItemData, setProductItemData] = useState<ProductItem>(DATAS.productItemList[route.params.id - 1])
   const widthSplit = appInfors.sizes.WIDTH * 0.3
   const widthButton = (appInfors.sizes.WIDTH - 16 * 2 - 40) / 2
 
@@ -60,7 +60,7 @@ const ProductDetailScreen = ({ navigation }: any) => {
         {/* product-name */}
         <InputComponent
           title='Name'
-          value={'Loost Shirt'}
+          value={productItemData.productName ?? 'Loost Shirt'}
           onChange={() => {}}
           inputStyles={{ paddingHorizontal: 6, borderRadius: 8 }}
           inputTextStyles={{ fontSize: 16 }}

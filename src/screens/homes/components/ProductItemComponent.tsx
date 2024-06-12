@@ -30,7 +30,7 @@ const ProductItemComponent = (props: Props) => {
           position: 'relative',
           width: '100%',
           paddingTop: '100%',
-          backgroundColor: 'yellow',
+          backgroundColor: 'tranparent',
           overflow: 'hidden',
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10
@@ -38,7 +38,10 @@ const ProductItemComponent = (props: Props) => {
       >
         <Image
           source={{
-            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&s'
+            uri: `${
+              item.productImages[0].productImageUrl ??
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&s'
+            }`
           }}
           style={{
             position: 'absolute',
@@ -69,7 +72,7 @@ const ProductItemComponent = (props: Props) => {
         <SpaceComponent height={6} />
 
         <TextComponent
-          text='Loose open shirt'
+          text={item?.productName ?? 'Loose Shirt'}
           font={appFonts.medium}
           size={17}
           color={appColors.text}
@@ -99,7 +102,7 @@ const ProductItemComponent = (props: Props) => {
           <RowComponent>
             <AntDesign name='star' size={14} color='#F9CB62' />
             <SpaceComponent width={6} />
-            <TextComponent text='4.8 ratings' color={appColors.text} size={14} />
+            <TextComponent text={`${item.productItemRating} ratings`} color={appColors.text} size={14} />
           </RowComponent>
         </RowComponent>
       </View>

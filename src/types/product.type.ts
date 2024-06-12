@@ -7,6 +7,7 @@ export interface ProductItem {
   productItemSold: number
   productItemRating: number
   productItemCode: number
+  productName?: string
   product?: Product
   productImages: ProductImage[]
 }

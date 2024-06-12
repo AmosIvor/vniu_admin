@@ -6,22 +6,23 @@
     "originalPrice": 19,
     "salePrice": 17,
     "productItemSold": 19,
-    "productItemRating": 4.3,
+    "productItemRating": 4.1,
     "productItemCode": 23153,
+    "productName": "Polo",
     "productImages": [
       {
         "productImageId": 1,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productImageUrl": "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/08/ao-polo-nam-ralph-lauren-slim-fit-rlneunavy-mau-xanh-navy-size-s-64e437aa2f58d-22082023112058.jpg",
         "productItemId": 1
       },
       {
         "productImageId": 2,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productImageUrl": "https://pos.nvncdn.com/778773-105877/ps/20230529_5xEM0bU9mm.jpeg",
         "productItemId": 1
       },
       {
         "productImageId": 3,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productImageUrl": "https://product.hstatic.net/1000312752/product/aplt233-3__4__b0450ae785194be8bdf0bfb3275fbee2.jpg",
         "productItemId": 1
       }
     ]
@@ -33,22 +34,23 @@
     "originalPrice": 19,
     "salePrice": 17,
     "productItemSold": 19,
-    "productItemRating": 4.3,
+    "productItemRating": 4.9,
     "productItemCode": 23153,
+    "productName": "Jeans",
     "productImages": [
       {
         "productImageId": 1,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productImageUrl": "https://m.media-amazon.com/images/I/717rca8TPOL._AC_UF894,1000_QL80_.jpg",
         "productItemId": 2
       },
       {
         "productImageId": 2,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0nfb_HrnxFuO7UScc3GMhOlyGA7ybC3z33A&s",
         "productItemId": 2
       },
       {
         "productImageId": 3,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productImageUrl": "https://lscoecomm.scene7.com/is/image/lscoecomm/STRAIGHT%20JEANS-1?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,1&op_usm=0.6,0.6,8&wid=1200&hei=1500",
         "productItemId": 2
       }
     ]
@@ -60,22 +62,23 @@
     "originalPrice": 19,
     "salePrice": 17,
     "productItemSold": 19,
-    "productItemRating": 4.3,
+    "productItemRating": 4.5,
     "productItemCode": 23153,
+    "productName": "Suit",
     "productImages": [
       {
         "productImageId": 1,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productImageUrl": "https://handcmediastorage.blob.core.windows.net/productimages/JK/JKPRAS013P-F46V-174821-1400px-1820px.jpg",
         "productItemId": 3
       },
       {
         "productImageId": 2,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productImageUrl": "https://cdn.suitdirect.co.uk/upload/siteimages/large/0058540_150_c.jpg",
         "productItemId": 3
       },
       {
         "productImageId": 3,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0705/6071/0947/files/10_Blue_Suit_2023_1945_JacketCrop.jpg?v=1699323639",
         "productItemId": 3
       }
     ]
@@ -88,22 +91,23 @@
     "originalPrice": 19,
     "salePrice": 17,
     "productItemSold": 19,
-    "productItemRating": 4.3,
+    "productItemRating": 4.7,
     "productItemCode": 23153,
+    "productName": "Short",
     "productImages": [
       {
         "productImageId": 1,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productImageUrl": "https://product.hstatic.net/1000312752/product/akst283-3l__1__f92b48c4efbc4564ba305ea1cea62392.jpg",
         "productItemId": 4
       },
       {
         "productImageId": 2,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productImageUrl": "https://product.hstatic.net/1000360022/product/id-006923a_536a162555b5497281bde10850b47661_large.jpg",
         "productItemId": 4
       },
       {
         "productImageId": 3,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productImageUrl": "https://bizweb.dktcdn.net/thumb/grande/100/358/122/products/artboard-2-916d1afd-4864-4534-81f9-c38264a6fa29-1-33f722c8-9162-4690-9290-1634530183b1-69ffcd5e-072a-4394-83cd-c5fb7abd7e1c.png?v=1654005402577",
         "productItemId": 4
       }
     ]
@@ -118,21 +122,51 @@
     "productItemSold": 19,
     "productItemRating": 4.3,
     "productItemCode": 23153,
+    "productName": "T-Shirt",
     "productImages": [
       {
         "productImageId": 1,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342418/Bayern_Munich_Away_9899_main_wam7u6.jpg",
+        "productImageUrl": "https://pbx2-pbww-prod-pbww-cdn.getprintbox.com/media/productimage/fe050866-8169-4645-ad76-10437425291c/Blank%20T-Shirt_thumb_300x300?mt=1588770269.372995",
         "productItemId": 5
       },
       {
         "productImageId": 2,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub1_ouerro.jpg",
+        "productImageUrl": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/454485/sub/goods_454485_sub14.jpg?width=494",
         "productItemId": 5
       },
       {
         "productImageId": 3,
-        "productImageUrl": "https://res.cloudinary.com/dym8nzltb/image/upload/v1717342419/Bayern_Munich_Away_9899_sub2_mhdbl2.jpg",
+        "productImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI4ocgIcwCme9gN_wURYgzc6PKUSkRweqy3A&s",
         "productItemId": 5
+      }
+    ]
+  },
+
+  {
+    "productItemId": 6,
+    "productId": 1,
+    "colourId": 1,
+    "originalPrice": 19,
+    "salePrice": 17,
+    "productItemSold": 19,
+    "productItemRating": 4.9,
+    "productItemCode": 23153,
+    "productName": "Jacket",
+    "productImages": [
+      {
+        "productImageId": 1,
+        "productImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Y4ggVt91L_kvbi8lKhZxxawiAUsiP33-1Q&s",
+        "productItemId": 6
+      },
+      {
+        "productImageId": 2,
+        "productImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwh42s9byqk6kzKc9hiaGfZush7ZEzDT5AQ&s",
+        "productItemId": 6
+      },
+      {
+        "productImageId": 3,
+        "productImageUrl": "https://m.media-amazon.com/images/I/71VFs2XrDVL._AC_UY350_.jpg",
+        "productItemId": 6
       }
     ]
   }
